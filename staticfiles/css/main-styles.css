@@ -1,4 +1,8 @@
 
+html {
+  scroll-behavior: smooth;
+}
+
 body, p {
     font-family: 'Overpass', 'Helvetica Neue';
     margin: 0px;
@@ -133,4 +137,11 @@ body, p {
   height: 100vh;
   margin: 0;
   background-color: #242629;
+}
+
+/* end container */
+.end-wrapper {
+  height: 100vh;
+  margin: 0;
+  background-color: #0F0E17;
 }
