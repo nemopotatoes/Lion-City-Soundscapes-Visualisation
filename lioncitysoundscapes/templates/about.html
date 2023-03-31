@@ -20,6 +20,7 @@
 
   <body>
 
+    <!-- title container -->
     <div id="bg-img">
       <div class="title-wrapper">
         <div class="title-container">
@@ -41,7 +42,33 @@
     <!-- navigation header -->
     {% include "header.html" %}
 
+    <!-- about container -->
+    <div class="about-wrapper">
+
+    </div>
+
+    <!-- methodology container -->
+    <div class="methodology-wrapper">
+
+    </div>
+
     
+
+    <!-- sticky header js -->
+    <script>
+      window.onscroll = function() {makeSticky()};
+
+      var header = document.getElementById("normalHeader");
+      var sticky = header.offsetTop;
+
+      function makeSticky() {
+        if (window.pageYOffset > sticky) {
+          header.classList.add("header-sticky");
+        } else {
+          header.classList.remove("header-sticky");
+        }
+      }
+    </script>
   </body>
 
 </html>

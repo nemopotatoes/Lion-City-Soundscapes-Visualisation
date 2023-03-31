@@ -10,7 +10,7 @@ body, p {
     background-size: cover;
   }
   
-/* home about page */
+/* title container */
 .title-wrapper {
   height: 100vh;
   margin: 0;
@@ -75,13 +75,16 @@ body, p {
 
 /* header */
 .header-wrapper {
-  padding: 40px;
+  padding: 40px 0 40px 0;
   background-color: #0F0E17;
+  width: 100%;
 }
 
 .header-sticky {
   position: fixed;
   top: 0;
+  width: 100%;
+  margin: 0;
 }
 
 .header-wrapper .header {
@@ -116,4 +119,18 @@ body, p {
 
 .map-header nav .active {
   color: #FF8906;
+}
+
+/* about container */
+.about-wrapper {
+  height: 100vh;
+  margin: 0;
+  background-color: #0F0E17;
+}
+
+/* methodology container */
+.methodology-wrapper {
+  height: 100vh;
+  margin: 0;
+  background-color: #242629;
 }

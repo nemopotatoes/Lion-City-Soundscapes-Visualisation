@@ -14,19 +14,3 @@
     </nav>
   </header>
 </div>
-
-<!-- sticky header js -->
-<script>
-  window.onscroll = function() {makeSticky()};
-
-  var header = document.getElementById("normalHeader");
-  var sticky = header.offsetTop;
-
-  function makeSticky() {
-    if (window.pageYOffset > sticky) {
-      header.classList.add("sticky");
-    } else {
-      header.classList.remove("sticky");
-    }
-  }
-</script>
