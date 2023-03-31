@@ -13,6 +13,9 @@
 
   <!-- load css file -->
   <link rel="stylesheet" href="{% static '/css/styles.css' %}" />
+
+  <!-- Load icon library -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
   <body>
@@ -22,10 +25,14 @@
           <p id="title">Lion City Soundscapes</p>
           <p id="subtitle">A Dataset of Characteristic Soundscapes of Singapore</p>
         </div>
+        
+      <div class="view-map-directly">
+        <a href="/map">or view the map directly</a>
+      </div>
       
       <div class="learnmore-container">
         <p id="learn-more">Learn More</p>
-        <button>hello</button>
+        <button><i class="fa fa-chevron-circle-down" aria-hidden="true"></i></button><br>
       </div>
     </div>
     <!-- navigation header -->

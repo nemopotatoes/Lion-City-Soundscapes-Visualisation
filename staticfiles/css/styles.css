@@ -3,6 +3,7 @@ body, p {
     margin: 0px;
 }
 
+/* home about page */
 .title-wrapper {
   height: 100vh;
   margin: 0;
@@ -12,11 +13,23 @@ body, p {
   align-items: center;
   position: relative;
   background-color: #242629;
+  row-gap: 18px;
 }
 
 .title-wrapper .title-container {
   text-align: center;
 }
+
+.title-wrapper .view-map-directly a {
+  font-size: 15px;
+  color: #FF8906;
+  transition: 0.15s;
+}
+
+.title-wrapper .view-map-directly a:hover {
+  color: #E53170;
+}
+
 
 #title {
   font-size: 60px;
@@ -32,16 +45,27 @@ body, p {
 
 .learnmore-container {
   position: absolute;
-  bottom: 200px;
+  bottom: 10vh;
   text-align: center;
 }
 
 #learn-more {
   color: #FFFFFE;
-  font-size: 18px;
+  font-size: 15px;
 }
 
+.learnmore-container button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
 
+.learnmore-container button .fa.fa-chevron-circle-down {
+  margin-top: 12px;
+  color: #FFFFFE;
+  background-color: transparent;
+  font-size: 25px !important;
+}
 
 
 
