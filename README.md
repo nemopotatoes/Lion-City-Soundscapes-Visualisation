@@ -86,9 +86,12 @@ Before setting up the project, make sure the following has been installed:
   ```
 
 - Run the Server:
+
   ```sh
   python manage.py runserver
   ```
+
+- View the project on your local server at: http://127.0.0.1:9000/ !
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
