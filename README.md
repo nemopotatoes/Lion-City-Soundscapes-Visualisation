@@ -4,7 +4,7 @@
 <br />
 <div align="center">
 
-<h3 align="center">Lion City Soundscapes</h3>
+<h3 align="center">Lion City Soundscapes (in progress)</h3>
 
   <p align="center">
     An interactive map web application for characteristic soundscapes in Singapore
@@ -98,9 +98,8 @@ Before setting up the project, make sure the following has been installed:
 
 - [x] Set up Django project
 - [x] Set up Leaflet interactive map
-- [ ] Finalise soundscape recordings (locations.csv)
-- [ ] AWS Integration
+- [x] Finalise soundscape recordings (locations.csv)
+- [x] AWS Integration(EC2 Free Tier)
 - [ ] Other Pages: About, Resources, Recordings, Contact
-- [ ] Admin Panel
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
