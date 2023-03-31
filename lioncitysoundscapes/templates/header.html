@@ -1,0 +1,14 @@
+{% load static %} <!-- load css files -->
+<link rel="stylesheet" href="{% static 'styles.css' %}" />
+
+<header class="header">
+  <a href="#" class="header-logo">Lion City Soundscapes</a>
+
+  <nav class="navbar">
+    <a href="#">About</a>
+    <a href="resources.html">Resources</a>
+    <a href="{% url 'map' %}">Map</a>
+    <a href="recordings.html">Recordings</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>

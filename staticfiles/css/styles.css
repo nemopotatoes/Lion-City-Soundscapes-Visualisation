@@ -1,0 +1,161 @@
+body, p {
+    font-family: 'Overpass', 'Helvetica Neue';
+    margin: 0px;
+}
+
+.title-wrapper {
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-color: #242629;
+}
+
+.title-wrapper .title-container {
+  text-align: center;
+}
+
+#title {
+  font-size: 60px;
+  font-weight: bold;
+  color: #FFFFFE;
+  margin-bottom: 10px;
+}
+
+#subtitle {
+  font-size: 18px;
+  color: #A7A9BE;
+}
+
+.learnmore-container {
+  position: absolute;
+  bottom: 200px;
+  text-align: center;
+}
+
+#learn-more {
+  color: #FFFFFE;
+  font-size: 18px;
+}
+
+
+
+
+
+
+
+/* map  */
+#mapdiv { 
+  width: 100%;
+  min-height: 100vh; 
+  position: absolute;
+  z-index: 50;
+}
+
+/* map header */
+.map-header {
+  width: 100% - 15px;
+  position: fixed;
+  right: 0;
+  left: 0;
+  z-index: 100;
+  padding: 15px;
+  background-color: #0F0E17;
+  display: flex;
+  justify-content: space-between;
+}
+
+.map-header .header-logo {
+  color: #FFFFFE;
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.map-header .navbar {
+  text-align: center;
+}
+
+.map-header nav a {
+  font-size: 15px;
+  color: #FFFFFE;
+  text-decoration: none;
+  padding-left: 30px;
+  transition: 0.12s linear;
+}
+
+.map-header nav a:hover {
+  color: #FF8906;
+}
+
+.map-header nav .active {
+  color: #FF8906;
+}
+
+/* leaflet map CSS */
+.leaflet-popup-tip-container {
+  left: 0%;
+}
+
+/* leaflet layer control */
+/* .leaflet-top .leaflet-control {
+  top: 50px;
+} */
+
+
+#btn {
+  position:fixed;
+  top: 65px;
+  left: 10px;
+  z-index:1000;
+  background:#242629;
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+  border: none;
+}
+
+.fa {
+  font-size: 20px !important;
+}
+
+.fa-search {
+  color: #FFFFFE;
+}
+
+/* leaflet layer control panel */
+.leaflet-control-layers-expanded {
+  font-family: 'Overpass';
+  color: #FFFFFE;
+  background: #242629;
+  position: fixed;
+  width: 250px;
+  bottom: 10px;
+  z-index: 3000;
+}
+
+.leaflet-touch .leaflet-control-layers {
+  border: 0px !important;
+}
+
+/* remove scrollbar from leaflet layer control */
+.leaflet-control-layers-list {
+  height: auto !important;
+  overflow: hidden;
+}
+
+.youtube-container {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio*/
+  height: 0;
+}
+.youtube-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
