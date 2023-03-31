@@ -12,7 +12,7 @@
   <link href='https://fonts.googleapis.com/css?family=Overpass' rel='stylesheet'>
 
   <!-- load css file -->
-  <link rel="stylesheet" href="{% static '/css/styles.css' %}" />
+  <link rel="stylesheet" href="{% static '/css/main-styles.css' %}" />
 
   <!-- Load icon library -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -20,21 +20,24 @@
 
   <body>
 
-    <div class="title-wrapper">
+    <div id="bg-img">
+      <div class="title-wrapper">
         <div class="title-container">
           <p id="title">Lion City Soundscapes</p>
           <p id="subtitle">A Dataset of Characteristic Soundscapes of Singapore</p>
         </div>
         
-      <div class="view-map-directly">
-        <a href="/map">or view the map directly</a>
-      </div>
-      
-      <div class="learnmore-container">
-        <p id="learn-more">Learn More</p>
-        <button><i class="fa fa-chevron-circle-down" aria-hidden="true"></i></button><br>
+        <div class="view-map-directly">
+          <a href="/map">or view the map directly</a>
+        </div>
+        
+        <div class="learnmore-container">
+          <p id="learn-more">Learn More</p>
+          <button><i class="fa fa-chevron-circle-down" aria-hidden="true"></i></button><br>
+        </div>
       </div>
     </div>
+    
     <!-- navigation header -->
     {% include "header.html" %}
 

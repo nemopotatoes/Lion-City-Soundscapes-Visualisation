@@ -1,14 +1,32 @@
 {% load static %} <!-- load css files -->
-<link rel="stylesheet" href="{% static 'styles.css' %}" />
+<link rel="stylesheet" href="{% static 'main-styles.css' %}" />
 
-<header class="header">
-  <a href="#" class="header-logo">Lion City Soundscapes</a>
+<div class="header-wrapper" id="normalHeader">
+  <header class="header">
+    <a href="#" class="header-logo">Lion City Soundscapes</a>
 
-  <nav class="navbar">
-    <a href="#">About</a>
-    <a href="resources.html">Resources</a>
-    <a href="{% url 'map' %}">Map</a>
-    <a href="recordings.html">Recordings</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-</header>
+    <nav class="navbar">
+      <a href="#/">About</a>
+      <a href="resources.html">Resources</a>
+      <a href="{% url 'map' %}">Map</a>
+      <a href="recordings.html">Recordings</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+</div>
+
+<!-- sticky header js -->
+<script>
+  window.onscroll = function() {makeSticky()};
+
+  var header = document.getElementById("normalHeader");
+  var sticky = header.offsetTop;
+
+  function makeSticky() {
+    if (window.pageYOffset > sticky) {
+      header.classList.add("sticky");
+    } else {
+      header.classList.remove("sticky");
+    }
+  }
+</script>
