@@ -9,10 +9,18 @@ body, p {
 }
 
 #bg-img {
-    background-image: url(../images/title-background.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
+  background-image: url(../images/background/title-background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+#last-panel-img {
+  background-image: url(../images/background/last-panel-background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
   
 /* title container */
 .title-wrapper {
@@ -168,7 +176,7 @@ body, p {
 
 /* end container */
 .end-wrapper {
-  background-color: #0F0E17;
+  background: rgba(0, 0, 0, 0.65);
 }
 
 .end-title {
