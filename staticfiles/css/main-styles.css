@@ -183,12 +183,39 @@ u, .link {
   margin: 0;
   background-color: #0F0E17;
   display: flex;
-  align-items: center;
+  /* align-items: center; */
+  /* vertical-align: middle; */
 }
 
 /* methodology container */
 .methodology-wrapper {
   background-color: #242629;
+}
+
+#methodology-container-content {
+  font-size: 15px;
+  color: #A7A9BE;
+  line-height: 2;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 100px;
+  align-items: center;
+}
+
+.methodology-wrapper .methodology-container #methodology-container-content .left-content {
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+.methodology-wrapper .methodology-container #methodology-container-content .right-content {
+  max-width: 100%;
+  align-items: center;
+  text-align: center;
+}
+
+.methodology-wrapper .methodology-container #methodology-container-content .right-content img {
+  object-fit: cover;
+  width: 70%;
 }
 
 /* end container */
