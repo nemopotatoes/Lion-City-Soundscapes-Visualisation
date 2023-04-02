@@ -1,0 +1,99 @@
+{% load static %} <!-- load css files -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lion City Soundscapes</title>
+
+  <!-- Overpass font -->
+  <link href='https://fonts.googleapis.com/css?family=Overpass' rel='stylesheet'>
+
+  <!-- load css file -->
+  <link rel="stylesheet" href="{% static '/css/main-styles.css' %}" />
+
+  <!-- Load icon library -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
+
+
+  <style>
+    body {
+        background-color: #070E17;
+    }
+  </style>
+</head>
+
+<body>
+    <!-- navigation header -->
+    <div class="header-wrapper">
+        <header class="header">
+          <a href="{% url 'about' %}" class="header-logo">Lion City Soundscapes</a>
+      
+          <nav class="navbar">
+            <a href="{% url 'about' %}">About</a>
+            <a href="resources.html">Resources</a>
+            <a href="{% url 'map' %}">Map</a>
+            <a href="recordings.html">Recordings</a>
+            <a href="{% url 'contact' %}" class="active">Contact</a>
+          </nav>
+        </header>
+    </div>
+
+    <!-- content -->
+    <p class="contactpage-title">Get in Touch</p>
+    <div class="wrapper">      
+      <div class="contact-container">
+
+        <div class="contactcard">
+          <div class="left">
+            <span class="fa-stack fa-lg fa-stack-align-middle">
+              <i class="fa fa-square fa-stack-2x"></i>
+              <i class="fa fa-map-marker-alt fa-stack-1x"></i>
+            </span>
+          </div>
+          <div class="right">
+            <p class="card-title">Location</p>
+            <p class="card-desc">
+              S2-B4A-03, Digital Signal Processing Lab <br>
+              Nanyang Technological University <br>
+              31 Nanyang Link, Singapore 637718
+            </p>
+          </div>
+        </div>
+
+        <div class="contactcard">
+          <div class="left">
+            <span class="fa-stack fa-lg fa-stack-align-middle">
+              <i class="fa fa-square fa-stack-2x"></i>
+              <i class="fa fa-envelope fa-stack-1x"></i>
+            </span>
+          </div>
+          <div class="right">
+            <p class="card-title">Email Address</p>
+            <p class="card-desc">name@exampleemail.com</p>
+          </div>
+        </div>
+
+        <div class="contactcard">
+          <div class="left">
+            <span class="fa-stack fa-lg fa-stack-align-middle">
+              <i class="fa fa-square fa-stack-2x"></i>
+              <i class="fa fa-address-book fa-stack-1x"></i>
+            </span>
+          </div>
+          <div class="right">
+            <p class="card-title">Contact No.</p>
+            <p class="card-desc">(+65) 1234 5678</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="picture-container">
+        <img src="{% static '/images/others/NTU_Hive.jpg' %}">
+      </div>
+
+    </div>
+</body>
+</html>

@@ -29,7 +29,7 @@
         </div>
         
         <div class="view-map-directly">
-          <a href="/map">view the map</a>
+          <a href="/map" class="link">view the map</a>
         </div>
         
         <div class="learnmore-container">
@@ -40,7 +40,19 @@
     </div>
     
     <!-- navigation header -->
-    {% include "header.html" %}
+    <div class="about-header-wrapper" id="normalHeader">
+      <header class="header">
+        <a href="{% url 'about' %}" class="header-logo">Lion City Soundscapes</a>
+    
+        <nav class="navbar">
+          <a href="{% url 'about' %}" class="active">About</a>
+          <a href="resources.html">Resources</a>
+          <a href="{% url 'map' %}">Map</a>
+          <a href="recordings.html">Recordings</a>
+          <a href="{% url 'contact' %}">Contact</a>
+        </nav>
+      </header>
+    </div>
 
     <!-- about container -->
     <div class="about-wrapper">
@@ -48,11 +60,11 @@
         <p id="container-title">About the Project</p> 
         <div id="container-content">
           <p>
-            <b>Lion City Soundscapes</b> presents a dataset of audio-visual recordings of 62 locations in Singapore. 
-            These locations were previously identified in the <a href="#">Singapore Soundscape Site Selection Survey (S5)</a> as 
+            <b>Lion City Soundscapes</b> presents a dataset of audio-visual recordings of characteristic soundscapes in Singapore. 
+            These soundscapes were previously identified in the <a href="#" class="link2">Singapore Soundscape Site Selection Survey (S5)</a> as 
             characeristic soundscapes spanning the perceptual quadrants generated from the "Pleasantness" and "Eventfulness" 
-            axes of the ISO 12913-3:2019 circumplex model of soundscape perception. The soundscapes are characterised 
-            into four categories that correspond to the four quadrants from the ISO 12913-3:2019 circumplex model:
+            axes of the ISO 12913-3:2019 circumplex model of soundscape perception. Currently, the database consists of soundscapes from 62 locations.
+            The soundscapes are characterised into four categories that correspond to the four quadrants from the ISO 12913-3:2019 circumplex model:
             "<b>full of life and exciting</b>", 
             "<b>chaotic and restless</b>", 
             "<b>calm and tranquil</b>", and 
@@ -63,8 +75,11 @@
           </p>
           <p>
             Full length recordings of each location span 9-38 minutes, and one-minute exceprts were cropped to represent 
-            the characteristic soundscapes. These one-minute excerpts are made publicly available, and can be viewed as YouTube video embeds
-            on the <a href="/map">interactive map</a>.
+            the characteristic soundscapes. These one-minute excerpts are made publicly available and can be viewed as YouTube video embeds
+            on the <a href="/map" class="link">interactive map</a>. Full length recordings are made available upon request and are free to use 
+            for research and educational purposes. <a href="/contact" class="link">Contact us</a> in case you would like to use them.
+            <br><br>
+            For more information on the project, read <a href="#" class="link2">the full paper</a>.
           </p>
         </div>
       </div>
