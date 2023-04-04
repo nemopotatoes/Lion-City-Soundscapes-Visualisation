@@ -1,0 +1,57 @@
+{% load static %} <!-- load css files -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lion City Soundscapes</title>
+
+  <!-- Overpass font -->
+  <link href='https://fonts.googleapis.com/css?family=Overpass' rel='stylesheet'>
+
+  <!-- load css file -->
+  <link rel="stylesheet" href="{% static '/css/main-styles.css' %}" />
+
+  <!-- Load icon library -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
+
+
+  <style>
+    body {
+        background-color: #070E17;
+    }
+  </style>
+</head>
+
+<body>
+    <!-- navigation header -->
+    <div class="header-wrapper">
+        <header class="header">
+          <a href="{% url 'about' %}" class="header-logo">Lion City Soundscapes</a>
+      
+          <nav class="navbar">
+            <a href="{% url 'about' %}">About</a>
+            <a href="resources.html">Resources</a>
+            <a href="{% url 'map' %}">Map</a>
+            <a href="{% url 'recordings' %}" class="active">Recordings</a>
+            <a href="{% url 'contact' %}">Contact</a>
+          </nav>
+        </header>
+    </div>
+
+    <!-- content -->
+    <div class="recordings-wrapper">
+        <p class="recordings-title">Recordings</p>
+        <p class="recordings-desc">
+            Full length recordings span 9-38 minutes and are made available upon request. These recordings are free to use for research 
+            and educational purposes. <a href="/contact" class="link">Contact us</a> in case you would like to use them. 
+            If you would like to view the one-minute excerpts, they are made publicly available and can be viewed as 
+            YouTube video embeds on the <a href="/map" class="link">interactive map</a>. <br><br>
+            To download the compiled list of recordings with their respective details and parameters, click on the button below.
+        </p>
+        <button onclick="document.location='../static/csv/LCS-soundscapes.csv'">List of Recordings</button>
+    </div>
+</body>
+</html>

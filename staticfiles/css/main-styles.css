@@ -291,7 +291,7 @@ u, .link {
 }
 
 
-.wrapper {
+.contact-wrapper {
   position: relative;
   align-items: center;
   width: 85%;
@@ -361,4 +361,46 @@ u, .link {
 .picture-container img {
   object-fit: cover;
   width: 80%;
+}
+
+
+/* recordings page */
+.recordings-wrapper {
+  position: relative;
+  width: 70%;
+  max-width: 1000px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.recordings-wrapper .recordings-title {
+  color: #FFFFFE;
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 7.5%;
+  margin-bottom: 20px;
+}
+
+.recordings-wrapper .recordings-desc {
+  color: #A7A9BE;
+  font-size: 15px;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.recordings-wrapper button {
+  display: flex;
+  align-self: center;
+  margin-top: 50px;
+  font-family: 'Overpass';
+  font-size: 15px;
+  font-weight: bold;
+  color: #FFFFFE;
+  background-color: #FF8906;
+  padding: 12px 25px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
 }

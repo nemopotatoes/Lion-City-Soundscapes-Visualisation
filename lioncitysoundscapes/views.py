@@ -9,3 +9,6 @@ def map_page(request):
 
 def contact_page(request):
     return render(request, 'contact.html')
+
+def recordings_page(request):
+    return render(request, 'recordings.html')
