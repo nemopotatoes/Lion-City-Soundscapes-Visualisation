@@ -103,6 +103,10 @@ Before setting up the project, make sure the following has been installed:
 - [x] Set up Leaflet interactive map
 - [x] Finalise soundscape recordings (locations.csv)
 - [x] AWS Integration(EC2 Free Tier)
-- [ ] Other Pages: About, Resources, Recordings, Contact
+- [ ] Other Pages:
+  - [x] About
+  - [ ] Resources
+  - [x] Recordings
+  - [x] Contact
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
