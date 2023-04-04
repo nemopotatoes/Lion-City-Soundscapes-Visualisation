@@ -86,9 +86,11 @@ $.get('../../static/csv/locations.csv', function(csvString) {
                 // var vidEmbed = '';
                 var win =  L.control.window(map,{title:row.Title, modal: false})
                         .content(
-                            '<div class="youtube-container"><iframe width="100%" height="100%" src="' + 
+                            '<div class="youtube-container"><iframe src="' + 
                             row.vidEmbed + 
-                            '?&autoplay=1&loop=1&modestbranding=1"frameborder="0" allow="autoplay; accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>'
+                            '?&autoplay=1&loop=1&modestbranding=1"frameborder="0" allow="autoplay; accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>' + 
+                            '<p class="link-title">Recording Links:</p>' +
+                            '<a href="' + row.vidLink + '" class="vid-link">1 Minute Recording</a></div>'
                         )
                         .prompt({})
                         .show()

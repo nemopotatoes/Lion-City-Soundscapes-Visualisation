@@ -96,16 +96,45 @@ body, p {
   height: auto !important;
   overflow: hidden;
 }
-
 .youtube-container {
-  position: relative;
-  padding-bottom: 56.25%; /* 16:9 aspect ratio*/
-  height: 0;
-}
-.youtube-container iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
+  aspect-ratio: 16/9;
   height: 100%;
+}
+
+.youtube-container iframe {
+  height: 100%;
+  aspect-ratio: 16/9;
+}
+
+.link-title {
+  /* position: absolute;
+  bottom: 40px; */
+  font-size: 18px;
+  font-weight: bold;
+  color: #FFFFFE;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.vid-link {
+  /* position: absolute;
+  bottom: 30px; */
+  color: #F25F4C !important;
+  font-size: 12px;
+  
+  text-decoration: none;
+  display: inline-block;
+  padding-bottom: 2px;
+  background-image: linear-gradient(#F25F4C 0 0);
+  background-position: 0 100%; /* bottom left*/
+  background-size: 0% 1.3px;
+  background-repeat: no-repeat;
+  transition: 
+    background-size 0.2s,
+    background-position 0s 0.2s; /*change after the size immediately*/
+}
+
+.vid-link:hover {
+  background-position: 100% 100%; /* bottom right*/
+  background-size: 100% 1.3px;
 }
