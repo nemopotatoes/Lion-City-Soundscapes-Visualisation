@@ -1,0 +1,93 @@
+{% load static %} <!-- load css files -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lion City Soundscapes</title>
+
+  <!-- Overpass font -->
+  <link href='https://fonts.googleapis.com/css?family=Overpass' rel='stylesheet'>
+
+  <!-- load css file -->
+  <link rel="stylesheet" href="{% static '/css/main-styles.css' %}" />
+
+  <!-- Load icon library -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
+
+
+  <style>
+    body {
+        background-color: #070E17;
+    }
+  </style>
+</head>
+
+<body>
+    <!-- navigation header -->
+    <div class="header-wrapper">
+        <header class="header">
+          <a href="{% url 'about' %}" class="header-logo">Lion City Soundscapes</a>
+      
+          <nav class="navbar">
+            <a href="{% url 'about' %}">About</a>
+            <a href="{% url 'resources' %}" class="active">Resources</a>
+            <a href="{% url 'map' %}">Map</a>
+            <a href="{% url 'recordings' %}">Recordings</a>
+            <a href="{% url 'contact' %}">Contact</a>
+          </nav>
+        </header>
+    </div>
+
+    <!-- content -->
+    <div class="resources-wrapper">
+        <p class="resourcespage-title">Related Works</p>
+        <p class="resourcespage-desc">
+            Related works and projects are listed here. These include those of which results and methods are 
+            referenced in the Lion City Soundscapes project. 
+        </p>
+       
+        <div class="resources-container">
+            
+            <div class="resources-card">
+                <p class="card-title">Singapore Soundscape Site Selection Survey (S5)</p>
+                <p class="card-desc">
+                    This study proposes a robust participant-led method to pinpoint characteristic 
+                    soundscapes possessing arbitrary perceptual attributes. Locations were first selected by local experts, and a 
+                    weighted k-means clustering was then performed on the selected locations. In total, 62 locations were identified 
+                    as suitable locations with characteristic soundscapes utilizing the ISO 12913-2 perceptual quadrants, and are 
+                    presented in Lion City Soundscapes.
+                </p>
+                <a href="/" class="resources-link">Learn more</a>
+            </div>
+
+            <div class="resources-card">
+                <p class="card-title">Automation of binaural headphone audio calibration on an artificial head</p>
+                <p class="card-desc">
+                    This method article proposes a stimulus-agnostic, automated calibration procedure for headphone audio 
+                    via an artificial head and torso simulator, with a LabVIEW implementation. This increases reliability and 
+                    productivity, as manual adjustment of audio tracks can become labrious when the number of stimuli is large. This method was 
+                    used to verify the usability of the pair of binaural microphones used in recording the soundscapes.
+                </p>
+                <a href="/" class="resources-link">Learn more</a>
+            </div>
+
+            <div class="resources-card">
+                <p class="card-title">Urban Soundscapes of the World</p>
+                <p class="card-desc">
+                    This project is a global initiative aimed at collecting and analyzing soundscapes 
+                    from urban environments around the world. It aims to create a public database of 
+                    soundscapes and has collected soundscapes from over 100 cities around the world. 
+                    The recording methodology of this project, inclusive of equipment and recording set up, 
+                    were referenced in Lion City Soundscapes.
+                </p>
+                <a href="https://urban-soundscapes.org/" class="resources-link">Learn more</a>
+            </div>
+
+        </div>
+
+    </div>
+</body>
+</html>

@@ -12,3 +12,6 @@ def contact_page(request):
 
 def recordings_page(request):
     return render(request, 'recordings.html')
+
+def resources_page(request):
+    return render(request, 'resources.html')
