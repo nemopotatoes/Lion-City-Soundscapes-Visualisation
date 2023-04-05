@@ -1,5 +1,4 @@
 // Set up map
-var center = L.bounds([1.56073, 105.11475], [1.16, 103.502]).getCenter();
 var map = L.map('mapdiv', {
     zoomControl: false                  // remove top left zoom controls
 }).setView([1.350270, 103.829959],13);  // lat and long coordinates + initial zoom
@@ -18,13 +17,12 @@ var LeafIcon = L.Icon.extend({
         popupAnchor:  [0, -25]
     }
 });
+
 var chaoticRestless = new LeafIcon({iconUrl: '../../static/images/customIcons/pink-marker.png'}),
     fulloflifeExciting = new LeafIcon({iconUrl: '../../static/images/customIcons/orange-marker.png'}),
     calmTranquil = new LeafIcon({iconUrl: '../../static/images/customIcons/green-marker.png'}),
     boringLifeless = new LeafIcon({iconUrl: '../../static/images/customIcons/black-marker.png'});
 
-// manual marker for debugging
-// var marker = L.marker([1.3452334942438957, 103.77095067139814],{title:"Click to show window." }).addTo(map);
 
 const fulloflifeExciting_array = [];
 const chaoticRestless_array = [];
@@ -35,7 +33,6 @@ const boringLifeless_array = [];
 $.get('../../static/csv/locations.csv', function(csvString) {
     // Use PapaParse to convert string to array of objects
     var data = Papa.parse(csvString, {header: true, dynamicTyping: true}).data;
-    console.log(data);
 
     // For each row in data, create a marker and add it to the map
     for (var i in data) {
@@ -43,47 +40,51 @@ $.get('../../static/csv/locations.csv', function(csvString) {
     
         // create a closure to preserve the value of row
         (function(row) {
-            // data clean soundscape type for custom marker
-            if (row.Type == 'F&E') {
-                row.Type = fulloflifeExciting;
-                // create marker, add it to layer, and push into array
-                var marker = L.marker([
-                    parseFloat(row.Latitude), 
-                    parseFloat(row.Longitude)
-                ], { opacity: 1, icon: row.Type });
-                fulloflifeExciting_layer.addLayer(marker);
-                fulloflifeExciting_array.push(marker);
-            } else if (row.Type == 'B&L') {
-                row.Type = boringLifeless;
-                // create marker, add it to layer, and push into array
-                var marker = L.marker([
-                    parseFloat(row.Latitude), 
-                    parseFloat(row.Longitude)
-                ], { opacity: 1, icon: row.Type });
-                boringLifeless_layer.addLayer(marker);
-                boringLifeless_array.push(marker);
-            } else if (row.Type == 'C&T') {
-                row.Type = calmTranquil;
-                // create marker, add it to layer, and push into array
-                var marker = L.marker([
-                    parseFloat(row.Latitude), 
-                    parseFloat(row.Longitude)
-                ], { opacity: 1, icon: row.Type });
-                calmTranquil_layer.addLayer(marker);
-                calmTranquil_array.push(marker);
-            } else if (row.Type == 'C&R') {
-                row.Type = chaoticRestless;
-                // create marker, add it to layer, and push into array
-                var marker = L.marker([
-                    parseFloat(row.Latitude), 
-                    parseFloat(row.Longitude)
-                ], { opacity: 1, icon: row.Type });
-                chaoticRestless_layer.addLayer(marker);
-                chaoticRestless_array.push(marker);
-            } else;
+
+            switch (row.Type) {
+                case 'F&E':
+                    row.Type = fulloflifeExciting;
+                    // create marker, add it to layer, and push into array
+                    var marker = L.marker([
+                        parseFloat(row.Latitude), 
+                        parseFloat(row.Longitude)
+                    ], { opacity: 1, icon: row.Type });
+                    fulloflifeExciting_layer.addLayer(marker);
+                    fulloflifeExciting_array.push(marker);
+                    break;
+                case 'B&L':
+                    row.Type = boringLifeless;
+                    // create marker, add it to layer, and push into array
+                    var marker = L.marker([
+                        parseFloat(row.Latitude), 
+                        parseFloat(row.Longitude)
+                    ], { opacity: 1, icon: row.Type });
+                    boringLifeless_layer.addLayer(marker);
+                    boringLifeless_array.push(marker);
+                    break;
+                case 'C&T':
+                    row.Type = calmTranquil;
+                    // create marker, add it to layer, and push into array
+                    var marker = L.marker([
+                        parseFloat(row.Latitude), 
+                        parseFloat(row.Longitude)
+                    ], { opacity: 1, icon: row.Type });
+                    calmTranquil_layer.addLayer(marker);
+                    calmTranquil_array.push(marker);
+                    break;
+                case 'C&R':
+                    row.Type = chaoticRestless;
+                    // create marker, add it to layer, and push into array
+                    var marker = L.marker([
+                        parseFloat(row.Latitude), 
+                        parseFloat(row.Longitude)
+                    ], { opacity: 1, icon: row.Type });
+                    chaoticRestless_layer.addLayer(marker);
+                    chaoticRestless_array.push(marker);
+                    break;
+            }
     
             marker.on('click', function() {
-                // var vidEmbed = '';
                 var win =  L.control.window(map,{title:row.Title, modal: false})
                         .content(
                             '<div class="youtube-container"><iframe src="' + 
@@ -94,7 +95,6 @@ $.get('../../static/csv/locations.csv', function(csvString) {
                         )
                         .prompt({})
                         .show()
-                // console.log(row.Title);
             });
         })(row); // immediately invoke the closure with row as an argument
     }    
