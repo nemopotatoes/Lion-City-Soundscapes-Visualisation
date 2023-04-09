@@ -44,6 +44,7 @@ $.get('../../static/csv/locations.csv', function(csvString) {
             switch (row.Type) {
                 case 'F&E':
                     row.Type = fulloflifeExciting;
+                    var attribute = '<img class="orange-att"> Full of Life and Exciting';
                     // create marker, add it to layer, and push into array
                     var marker = L.marker([
                         parseFloat(row.Latitude), 
@@ -54,6 +55,7 @@ $.get('../../static/csv/locations.csv', function(csvString) {
                     break;
                 case 'B&L':
                     row.Type = boringLifeless;
+                    var attribute = '<img class="black-att"> Boring and Lifeless';
                     // create marker, add it to layer, and push into array
                     var marker = L.marker([
                         parseFloat(row.Latitude), 
@@ -64,6 +66,7 @@ $.get('../../static/csv/locations.csv', function(csvString) {
                     break;
                 case 'C&T':
                     row.Type = calmTranquil;
+                    var attribute = '<img class="green-att"> Calm and Tranquil';
                     // create marker, add it to layer, and push into array
                     var marker = L.marker([
                         parseFloat(row.Latitude), 
@@ -74,6 +77,7 @@ $.get('../../static/csv/locations.csv', function(csvString) {
                     break;
                 case 'C&R':
                     row.Type = chaoticRestless;
+                    var attribute = '<img class="pink-att"> Chaotic and Restless';
                     // create marker, add it to layer, and push into array
                     var marker = L.marker([
                         parseFloat(row.Latitude), 
@@ -85,16 +89,22 @@ $.get('../../static/csv/locations.csv', function(csvString) {
             }
     
             marker.on('click', function() {
-                var win =  L.control.window(map,{title:row.Title, modal: false})
-                        .content(
-                            '<div class="youtube-container"><iframe src="' + 
-                            row.vidEmbed + 
-                            '?&autoplay=1&loop=1&modestbranding=1"frameborder="0" allow="autoplay; accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>' + 
-                            '<p class="link-title">Recording Links:</p>' +
-                            '<a href="' + row.vidLink + '" class="vid-link">1 Minute Recording</a>'
-                        )
-                        .prompt({})
-                        .show()
+                L.control.window(map,{title:row.Title, modal: false})
+                    .content(
+                        // youtube video
+                        '<div class="youtube-container"><iframe src="' + 
+                        row.vidEmbed + 
+                        '?&autoplay=1&loop=1&modestbranding=1"frameborder="0" allow="autoplay; accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>' + 
+                        // recording links
+                        '<div class="window-content">' + 
+                            '<div class="left-col">' +
+                                '<p class="window-content-title">Recording Links:</p>' +
+                                '<a href="' + row.vidLink + '" class="vid-link">1 Minute Recording</a>' +
+                            '</div>' +
+                            '<div class="right-col">' + attribute + '</div>'
+                    )
+                    .prompt({})
+                    .show()
             });
         })(row); // immediately invoke the closure with row as an argument
     }    

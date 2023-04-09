@@ -155,9 +155,18 @@ body, p {
   aspect-ratio: 16/9;
 }
 
-.link-title {
-  /* position: absolute;
-  bottom: 40px; */
+/* popup window content */
+.window-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.window-content .right-col {
+  margin-top: 30px;
+  color: #A7A9BE;
+}
+
+.window-content-title {
   font-size: 18px;
   font-weight: bold;
   color: #FFFFFE;
