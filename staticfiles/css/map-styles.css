@@ -83,12 +83,59 @@ body, p {
   background: #242629;
   position: fixed;
   width: 250px;
-  bottom: 10px;
+  height: auto;
   z-index: 3000;
+  padding: 15px;
 }
 
 .leaflet-touch .leaflet-control-layers {
   border: 0px !important;
+}
+
+/* layer control label */
+.layer-control-label {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.leaflet-control-layers-overlays label div {
+  margin: 5px 0 0 -3px;
+}
+
+/* filter content styles */
+.leaflet-control-layers-overlays label div span {
+  font-size: 13px;
+  font-weight: normal;
+  color: #A7A9BE;
+  cursor: pointer;
+  user-select: none;
+}
+
+.leaflet-control-layers-overlays a {
+  color: #A7A9BE !important;
+  font-size: 13px;
+}
+
+.orange-att, .pink-att, .green-att, .black-att {
+  height: 20px;
+  width: 20px;
+  vertical-align: middle;
+}
+
+.orange-att {
+  content: url(../images/customIcons/orange-marker.png);
+}
+
+.pink-att {
+  content: url(../images/customIcons/pink-marker.png);
+}
+
+.green-att {
+  content: url(../images/customIcons/green-marker.png);
+}
+
+.black-att {
+  content: url(../images/customIcons/black-marker.png);
 }
 
 /* remove scrollbar from leaflet layer control */
@@ -97,6 +144,7 @@ body, p {
   overflow: hidden;
 }
 
+/* youtube styles */
 .youtube-container {
   aspect-ratio: 16/9;
   height: 100%;

@@ -86,7 +86,7 @@
     padding-left: 20px;
     padding-right: 20px;
     z-index:29;
-    overflow: scroll;
+    overflow: auto;
 }
 
 .leaflet-control-window .promptButtons{

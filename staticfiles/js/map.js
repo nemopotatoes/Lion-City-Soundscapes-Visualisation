@@ -124,10 +124,10 @@ var basemap = L.tileLayer('https://maps-{s}.onemap.sg/v3/Grey/{z}/{x}/{y}.png', 
 map.setMaxBounds([[1.50073, 104.1147], [1.16, 103.602]]);
 
 var overlayMaps = {
-    "Full of Life and Exciting": fulloflifeExciting_layer,
-    "Chaotic and Restless": chaoticRestless_layer,
-    "Calm and Tranquil": calmTranquil_layer,
-    "Boring and Lifeless": boringLifeless_layer
+    "<img class='orange-att'> Full of Life and Exciting": fulloflifeExciting_layer,
+    "<img class='pink-att'> Chaotic and Restless": chaoticRestless_layer,
+    "<img class='green-att'> Calm and Tranquil": calmTranquil_layer,
+    "<img class='black-att'> Boring and Lifeless": boringLifeless_layer
 };
 
 // add overlay layers to map and pass an empty object for the base layers argument
@@ -144,3 +144,6 @@ $('.leaflet-control-layers').css('top','100px');
 btn.onclick = function() {
     $('.leaflet-control-layers').toggle();
 }
+
+// add filter title
+$(".leaflet-control-layers-overlays").prepend("<label class='layer-control-label'>Perceptual Attributes</label>");
