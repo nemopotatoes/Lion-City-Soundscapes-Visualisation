@@ -29,12 +29,10 @@
     z-index: 2000;
     border-radius: 2px;
     margin: 30px 8px 8px 8px;
-    aspect-ratio: 4/3;
-    height: 80%;
-    max-width: 80%;
+    max-height: 90%;
+    width: 60%;
     padding-left: 10px;
     padding-right: 10px;
-    padding: 16/9;
 
     /** BOX SHADOW **/
     -webkit-box-shadow: 2px 2px 10px 0px rgba(0,0,0,0.75);
@@ -88,7 +86,7 @@
     padding-left: 20px;
     padding-right: 20px;
     z-index:29;
-    overflow: visible;
+    overflow: scroll;
 }
 
 .leaflet-control-window .promptButtons{
@@ -97,25 +95,16 @@
 }
 
 .leaflet-control-window button{
-    /* position: relative;
-    display: inline-block; */
     position: absolute;
     display: block;
     top: 0;
     right: 0;
     background-color: transparent;
-    /* color: inherit; */
-
-    /* opacity: 0.5;
-    transition-property: opacity;
-    transition-duration: 0.2s;
-    transition-timing-function: linear; */
+    color: inherit;
 
     cursor:pointer;
     -webkit-border-radius: 4px;
     border-radius: 4px;
-    /* padding: 8px; */
-    /* margin: 12px 8px 0 8px; */
     margin: 20px;
     font-size: 0;
     background-color: transparent;
@@ -125,6 +114,10 @@
     background-size: cover;
     width: 20px;
     height: 20px;
+    
+    transition-property: background-image;
+    transition-duration: 0.12s;
+    transition-timing-function: linear;
 }
 
 .leaflet-control-window button:focus {
@@ -132,8 +125,9 @@
 }
 
 .leaflet-control-window button:hover {
-    opacity: 1;
+    background-image: url('../../../static/images/buttons/close_hover.png');
 }
+
 .disabled{
 	opacity: .5;
 	pointer-events:none;

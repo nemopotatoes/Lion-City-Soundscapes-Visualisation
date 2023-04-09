@@ -278,7 +278,7 @@ L.Control.Window = L.Control.extend({
         var height = rect.bottom -rect.top;
 
         var maxHeight = height - margin;
-        this._containerContent.setAttribute('style','max-height:'+maxHeight+'px')
+        // this._containerContent.setAttribute('style','max-height:'+maxHeight+'px')
     },
     close : function(){
         this.hide();

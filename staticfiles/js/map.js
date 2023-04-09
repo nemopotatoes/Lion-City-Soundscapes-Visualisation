@@ -89,9 +89,9 @@ $.get('../../static/csv/locations.csv', function(csvString) {
                         .content(
                             '<div class="youtube-container"><iframe src="' + 
                             row.vidEmbed + 
-                            '?&autoplay=1&loop=1&modestbranding=1"frameborder="0" allow="autoplay; accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>' + 
+                            '?&autoplay=1&loop=1&modestbranding=1"frameborder="0" allow="autoplay; accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>' + 
                             '<p class="link-title">Recording Links:</p>' +
-                            '<a href="' + row.vidLink + '" class="vid-link">1 Minute Recording</a></div>'
+                            '<a href="' + row.vidLink + '" class="vid-link">1 Minute Recording</a>'
                         )
                         .prompt({})
                         .show()
