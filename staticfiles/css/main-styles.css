@@ -12,7 +12,7 @@ body, p {
   margin: 0px;
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
-  animation: fadeInAnimation ease 1s;
+  animation: fadeInAnimation ease 0.7s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
 }
@@ -252,12 +252,20 @@ u, .link {
   font-family: 'Overpass';
   font-size: 18px;
   color: #FFFFFE;
-  font-weight: bold;
+  /* font-weight: bold; */
   background-color: #FF8906;
   padding: 15px 30px;
   border-radius: 5px;
   cursor: pointer;
-  border: none;
+  border: solid 1px transparent;
+  transition: 0.12s linear;
+}
+
+.end-container .btn:hover {
+  background-color: transparent;
+  border: solid 1px #F25F4C;
+  color: #F25F4C;
+  font-weight: normal;
 }
 
 /* container css */
@@ -416,15 +424,21 @@ u, .link {
   margin-top: 50px;
   font-family: 'Overpass';
   font-size: 15px;
-  font-weight: bold;
+  /* font-weight: bold; */
   color: #FFFFFE;
   background-color: #FF8906;
   padding: 12px 25px;
   border-radius: 5px;
   cursor: pointer;
-  border: none;
+  border: solid 1px transparent;
+  transition: 0.12s linear;
 }
 
+.recordings-wrapper button:hover {
+  background-color: transparent;
+  color: #F25F4C;
+  border: solid 1px #F25F4C;
+}
 
 /* resources page */
 .resources-wrapper {
