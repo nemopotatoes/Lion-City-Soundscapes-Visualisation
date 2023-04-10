@@ -3,9 +3,16 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Hide scrollbar for Chrome, Safari and Opera */
+body::-webkit-scrollbar {
+  display: none;
+}
+
 body, p {
-    font-family: 'Overpass', 'Helvetica Neue';
-    margin: 0px;
+  font-family: 'Overpass', 'Helvetica Neue';
+  margin: 0px;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
 }
 
 u, .link {
