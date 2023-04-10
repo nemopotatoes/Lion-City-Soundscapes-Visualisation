@@ -99,7 +99,8 @@ $.get('../../static/csv/locations.csv', function(csvString) {
                         '<div class="window-content">' + 
                             '<div class="left-col">' +
                                 '<p class="window-content-title">Recording Links:</p>' +
-                                '<a href="' + row.vidLink + '" class="vid-link">1 Minute Recording</a>' +
+                                '<a href="' + row.vidLink_oneMin + '" class="vid-link">1 Minute Recording</a><br>' +
+                                '<a href="' + row.vidLink_full + '" class="vid-link">Full Recording (camera audio and video only)</a>' +
                             '</div>' +
                             '<div class="right-col">' + attribute + '</div>'
                     )

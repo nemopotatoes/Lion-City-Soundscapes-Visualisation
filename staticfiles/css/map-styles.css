@@ -178,10 +178,11 @@ body, p {
   /* position: absolute;
   bottom: 30px; */
   color: #F25F4C !important;
-  font-size: 12px;
+  font-size: 13px;
   
   text-decoration: none;
   display: inline-block;
+  padding-top: 5px;
   padding-bottom: 2px;
   background-image: linear-gradient(#F25F4C 0 0);
   background-position: 0 100%; /* bottom left*/
@@ -193,6 +194,7 @@ body, p {
 }
 
 .vid-link:hover {
+  font-weight: bold;
   background-position: 100% 100%; /* bottom right*/
   background-size: 100% 1.3px;
 }
