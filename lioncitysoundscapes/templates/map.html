@@ -44,6 +44,25 @@
     </div>
     <script src="{% static '/js/map.js' %}"></script>
 
+    <!-- responsive navbar js -->
+    <script>
+      function makeResponsive() {
+          var x = document.getElementById("normalMapNavbar");
+          if (x.className === "navbar") {
+              x.className += " responsive";
+          } else {
+              x.className = "navbar";
+          }
+  
+          var y = document.getElementById("unresponsiveMapHeader");
+          if (y.className === "map-header") {
+              y.className += " responsive";
+          } else {
+              y.className = "map-header";
+          }
+      }
+    </script>
+
   </body>
 
 </html>

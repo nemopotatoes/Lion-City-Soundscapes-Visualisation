@@ -164,6 +164,7 @@ body, p {
 .window-content .right-col {
   margin-top: 30px;
   color: #A7A9BE;
+  text-align: right;
 }
 
 .window-content-title {
@@ -175,8 +176,6 @@ body, p {
 }
 
 .vid-link {
-  /* position: absolute;
-  bottom: 30px; */
   color: #F25F4C !important;
   font-size: 13px;
   
@@ -198,3 +197,52 @@ body, p {
   background-position: 100% 100%; /* bottom right*/
   background-size: 100% 1.3px;
 }
+
+.icon {
+  display: none;
+  font-size: 20px;
+  color: #fffffe;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* responsive map header css */
+
+@media screen and (max-width: 700px) {
+  .navbar {
+    display: none;
+  }
+
+  .map-header {
+    z-index: 2000;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .icon {
+    float: right;
+    display: block;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+  }
+  .navbar.responsive {
+    float: none;
+    position: relative; 
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+  .navbar.responsive a {
+    text-align: left;
+    padding-left: 0 !important;
+    margin-top: 20px;
+  }
+
+  .map-header.responsive {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+

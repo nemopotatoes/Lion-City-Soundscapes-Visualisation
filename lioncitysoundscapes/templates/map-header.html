@@ -1,10 +1,11 @@
 <!-- load css files -->
 {% load static %}
 
-<header class="map-header">
+<header class="map-header" id="unresponsiveMapHeader">
   <a href="{% url 'about' %}" class="header-logo">Lion City Soundscapes</a>
+  <a href="javascript:void(0);" class="icon" onclick="makeResponsive()">&#9776;</a>
 
-  <nav class="navbar">
+  <nav class="navbar" id="normalMapNavbar">
     <a href="{% url 'about' %}">About</a>
     <a href="{% url 'resources' %}">Resources</a>
     <a href="#/" class="active">Map</a>

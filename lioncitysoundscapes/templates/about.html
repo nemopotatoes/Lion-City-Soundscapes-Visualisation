@@ -41,10 +41,11 @@
     
     <!-- navigation header -->
     <div class="about-header-wrapper" id="normalHeader">
-      <header class="header">
+      <header class="header" id="unresponsiveHeader">
         <a href="{% url 'about' %}" class="header-logo">Lion City Soundscapes</a>
+        <a href="javascript:void(0);" class="icon" onclick="makeResponsive()">&#9776;</a>
     
-        <nav class="navbar">
+        <nav class="navbar" id="normalNavbar">
           <a href="{% url 'about' %}" class="active">About</a>
           <a href="{% url 'resources' %}">Resources</a>
           <a href="{% url 'map' %}">Map</a>
@@ -80,7 +81,6 @@
             However, preview videos of the files have been made available on YouTube and on the <a href="/map" class="link">interactive map</a>, 
             and all full-length files are available upon request. These recordings are free to use for research and educational purposes.
             <a href="/contact" class="link">Contact us</a> in case you would like to use them. 
-            <br><br>
           </p>
         </div>
       </div>
@@ -139,5 +139,23 @@
       }
     </script>
 
+    <!-- responsive navbar js -->
+    <script>
+      function makeResponsive() {
+        var x = document.getElementById("normalNavbar");
+        if (x.className === "navbar") {
+          x.className += " responsive";
+        } else {
+          x.className = "navbar";
+        }
+
+        var y = document.getElementById("unresponsiveHeader");
+        if (y.className === "header") {
+          y.className += " responsive";
+        } else {
+          y.className = "header";
+        }
+      }
+    </script>
   </body>
 </html>
