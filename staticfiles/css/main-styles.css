@@ -185,6 +185,28 @@ u, .link {
   text-decoration: none;
 }
 
+/* photo creds css */
+#creds1 {
+  color: rgba(255, 255, 254, 0.4);
+  font-size: 12px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+#creds2 {
+  color: rgba(255, 255, 254, 0.4);
+  font-size: 12px;
+  position: relative;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.65);
+}
+
+#creds1 a, #creds2 a {
+  color: rgba(255, 255, 254, 0.4);
+}
+
 /* general pages css */
 #container-title {
   font-size: 40px;
@@ -298,6 +320,7 @@ u, .link {
   font-size: 50px;
   margin-bottom: 40px;
 }
+
 
 .end-container .btn {
   font-family: "Overpass";
