@@ -567,11 +567,10 @@ u, .link {
   display: grid;
   margin-top: 90px;
   justify-content: center;
-  align-items: center;
 
-  grid-template-columns: repeat(auto-fill, 380px);
+  grid-template-columns: repeat(auto-fit, 380px);
   row-gap: 30px;
-  padding-left: 30px;
+  padding: 30px;
 }
 
 @media screen and (max-width: 1380px) {
