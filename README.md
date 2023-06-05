@@ -5,7 +5,7 @@
 <div align="center">
 
 <h3 align="center">Lion City Soundscapes Visualisation</h3>
-<h4 align="center">(README.md is still being updated)</h4>
+<p align="center">NTU Final Year Project 2023. Grade Attained: A+</p>
 
   <p align="left">
     A Django web application that visualises characteristic soundscapes of Singapore on an interactive Leaflet map. This project was done as part of my Final Year Project (FYP) Bachelor of Honours requirement at NTU and is part of the project 'Lion City Soundscapes'. More information on the project can be found at https://doi.org/10.21979/N9/AVHSBX. This repository comprises of the code used to develop the web application and includes instructions to install the project locally. The web application has been deployed on Amazon EC2 and can be viewed live at https://tinyurl.com/fyp-lcs. 
