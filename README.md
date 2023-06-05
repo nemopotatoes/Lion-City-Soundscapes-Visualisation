@@ -59,7 +59,7 @@
 
 To ensure that the project runs smoothly, please make sure you have the following dependencies installed on your system:
 
-- **Python**: This project is built with Python version 3.11.0. You can download the latest version of Python from the official website python.org. To check if you have the correct version of Python installed, open a terminal or command prompt and run the following command:
+- **Python**: This project is built with Python version 3.11.0. You can download the latest version of Python from the <a href="python.org">official website</a>. To check if you have the correct version of Python installed, open a terminal or command prompt and run the following command:
 
   ```sh
   python --version
@@ -94,9 +94,29 @@ To ensure that the project runs smoothly, please make sure you have the followin
 
 ### Installation
 
+This README.md is still being updated. **Please note that the installation instructions are written for Windows machines only.** Installation instructions for other OS will be updated in the future.
+
 #### Step 1: Setting up and activating the Virtual Environment
 
-Once `venv` has been installed (refer to project prerequisites)
+Python virtual environments help to create an isolated environment for development, where you can install dependencies, and other required third-party packages. Once the Python virtual environment `venv` has been installed (refer to <a href="#prerequisites">project prerequisites</a>), create a new virtual environment called `env` with the following command line in your terminal:
+
+```sh
+python -m venv env
+```
+
+Next, activate the virtual environment with the following command:
+
+```sh
+env\Scripts\activate
+```
+
+We can now install Django within the virtual environment with the following line:
+
+```sh
+pip install django
+```
+
+Now, we are ready to install the Lion City Soundscapes Visualisation project.
 
 #### Step 2: Installing the Project
 
@@ -112,7 +132,7 @@ You may navigate to the project folder in the terminal, where `path/to/` is the 
 cd path/to/Lion-City-Soundscapes-Visualisation
 ```
 
-Install project dependencies in the project's directory with the following command (make sure you have pip installed for this step)
+Install project dependencies in the project's directory with the following command (make sure you have pip installed for this step (refer to <a href="#prerequisites">project prerequisites</a>))
 
 ```sh
 pip install -r requirements.txt
@@ -120,7 +140,7 @@ pip install -r requirements.txt
 
 #### Step 3: Running the Project on a Local Server
 
-You may run the project on a local server by entering the following line in the project directory `/path/to/Lion-City-Soundscapes-Visualisation`. Please make sure you have python installed for this step.
+You may run the project on a local server by entering the following line in the project directory `/path/to/Lion-City-Soundscapes-Visualisation`. Please make sure you have python installed for this step (refer to <a href="#prerequisites">project prerequisites</a>).
 
 ```sh
 python manage.py runserver
@@ -145,7 +165,8 @@ To stop the server, press `Ctrl`+`C` in your keyboard in the same terminal.
 - [x] Set up Django project
 - [x] Set up Leaflet interactive map
 - [x] Finalise soundscape recordings (locations.csv)
-- [x] AWS Integration (EC2 Free Tier)
+- [x] AWS Deployment (EC2 Free Tier)
 - [x] Other Pages (About, Resources, Recordings, Contact)
+- [x] Testing
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
