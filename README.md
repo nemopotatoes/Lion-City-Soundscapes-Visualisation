@@ -154,10 +154,6 @@ python manage.py runserver
 
 The project can be viewed on your local server at http://127.0.0.1:8000/
 
-<br>
-
-#### Step 4: Stopping the Server
-
 To stop the server, press `Ctrl`+`C` in your keyboard in the same terminal.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
