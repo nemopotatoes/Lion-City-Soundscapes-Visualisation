@@ -8,7 +8,7 @@
 <h4 align="center">(README.md is still being updated)</h4>
 
   <p align="left">
-    A Django web application that visualises characteristic soundscapes of Singapore on an interactive Leaflet map. This project was done as part of my Final Year Project (FYP) Bachelor of Honours requirement at NTU and is part of the project 'Lion City Soundscapes'. This repository comprises of the code used to develop the web application and includes instructions to install the project locally. The web application has been deployed on Amazon EC2 and can be viewed live <a href="">here</a>. 
+    A Django web application that visualises characteristic soundscapes of Singapore on an interactive Leaflet map. This project was done as part of my Final Year Project (FYP) Bachelor of Honours requirement at NTU and is part of the project 'Lion City Soundscapes'. More information on the project can be found at https://doi.org/10.21979/N9/AVHSBX. This repository comprises of the code used to develop the web application and includes instructions to install the project locally. The web application has been deployed on Amazon EC2 and can be viewed live at https://tinyurl.com/fyp-lcs. 
     <br />
     <br />
   </p>
@@ -59,7 +59,7 @@
 
 To ensure that the project runs smoothly, please make sure you have the following dependencies installed on your system:
 
-- **Python**: This project is built with Python version 3.11.0. You can download the latest version of Python from the <a href="python.org">official website</a>. To check if you have the correct version of Python installed, open a terminal or command prompt and run the following command:
+- **Python**: This project is built with Python version 3.11.0. You can download the latest version of Python from the <a href="https://www.python.org/">official website</a>. To check if you have the correct version of Python installed, open a terminal or command prompt and run the following command:
 
   ```sh
   python --version
@@ -75,22 +75,6 @@ To ensure that the project runs smoothly, please make sure you have the followin
 
   This will display the installed version of Pip. To ensure the project runs smoothly, please ensure your version of Pip is 22.3.1 or newer.
 
-- **Python Virtual Environment**: To install and set up the virtual environment, run the following command line in the termianal or command prompt:
-
-  ```sh
-  python -m pip install venv
-  ```
-
-- Django
-
-  ```sh
-  pip install django
-  ```
-
-- Django Virtual Enviornment
-  ```sh
-  pip install virtualenv
-  ```
   <br>
   <br>
 
@@ -102,7 +86,7 @@ This README.md is still being updated. **Please note that the installation instr
 
 #### Step 1: Setting up and activating the Virtual Environment
 
-Python virtual environments help to create an isolated environment for development, where you can install dependencies, and other required third-party packages. Once the Python virtual environment `venv` has been installed, create a new virtual environment called `env` with the following command line in your terminal:
+Python virtual environments help to create an isolated environment for development, where you can install dependencies, and other required third-party packages. Once Python has been installed, create a new Python virtual environment called `env` with the following command line in your terminal:
 
 ```sh
 python -m venv env
@@ -127,7 +111,7 @@ pip install django
 Clone the repository by downloading it from https://github.com/nemopotatoes/Lion-City-Soundscapes-Visualisation, or enter the following command on a terminal (with git installed):
 
 ```sh
-git clone https://github.com/ntudsp/Lion-City-Soundscapes-Visualisation.git
+git clone https://github.com/nemopotatoes/Lion-City-Soundscapes-Visualisation.git
 ```
 
 You may navigate to the project folder in the terminal, where `path/to/` is the directory of the folder:
