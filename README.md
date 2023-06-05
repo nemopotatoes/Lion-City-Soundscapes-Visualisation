@@ -134,7 +134,7 @@ You may navigate to the project folder in the terminal, where `path/to/` is the 
 cd path/to/Lion-City-Soundscapes-Visualisation
 ```
 
-Install project dependencies in the project's directory with the following command (make sure you have pip installed for this step (refer to <a href="#prerequisites">project prerequisites</a>))
+Install project dependencies in the project's directory with the following command (make sure you have pip installed for this step):
 
 ```sh
 pip install -r requirements.txt
@@ -143,7 +143,7 @@ pip install -r requirements.txt
 <br>
 #### Step 3: Running the Project on a Local Server
 
-You may run the project on a local server by entering the following line in the project directory `/path/to/Lion-City-Soundscapes-Visualisation`. Please make sure you have python installed for this step (refer to <a href="#prerequisites">project prerequisites</a>).
+You may run the project on a local server by entering the following line in the project directory `/path/to/Lion-City-Soundscapes-Visualisation`. Please make sure you have python installed for this step.
 
 ```sh
 python manage.py runserver
