@@ -91,11 +91,14 @@ To ensure that the project runs smoothly, please make sure you have the followin
   ```sh
   pip install virtualenv
   ```
+  <br>
+  <br>
 
 ### Installation
 
 This README.md is still being updated. **Please note that the installation instructions are written for Windows machines only.** Installation instructions for other OS will be updated in the future.
 
+<br>
 #### Step 1: Setting up and activating the Virtual Environment
 
 Python virtual environments help to create an isolated environment for development, where you can install dependencies, and other required third-party packages. Once the Python virtual environment `venv` has been installed (refer to <a href="#prerequisites">project prerequisites</a>), create a new virtual environment called `env` with the following command line in your terminal:
@@ -116,8 +119,7 @@ We can now install Django within the virtual environment with the following line
 pip install django
 ```
 
-Now, we are ready to install the Lion City Soundscapes Visualisation project.
-
+<br>
 #### Step 2: Installing the Project
 
 Clone the repository by downloading it from https://github.com/nemopotatoes/Lion-City-Soundscapes-Visualisation, or enter the following command on a terminal (with git installed):
@@ -138,6 +140,7 @@ Install project dependencies in the project's directory with the following comma
 pip install -r requirements.txt
 ```
 
+<br>
 #### Step 3: Running the Project on a Local Server
 
 You may run the project on a local server by entering the following line in the project directory `/path/to/Lion-City-Soundscapes-Visualisation`. Please make sure you have python installed for this step (refer to <a href="#prerequisites">project prerequisites</a>).
@@ -148,6 +151,7 @@ python manage.py runserver
 
 The project can be viewed on your local server at http://127.0.0.1:8000/
 
+<br>
 #### Step 4: Stopping the Server
 
 To stop the server, press `Ctrl`+`C` in your keyboard in the same terminal.
