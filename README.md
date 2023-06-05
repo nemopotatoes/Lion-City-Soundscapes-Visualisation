@@ -171,6 +171,6 @@ To stop the server, press `Ctrl`+`C` in your keyboard in the same terminal.
 - [x] Finalise soundscape recordings (locations.csv)
 - [x] AWS Deployment (EC2 Free Tier)
 - [x] Other Pages (About, Resources, Recordings, Contact)
-- [x] Testing
+- [x] Functional Testing
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
