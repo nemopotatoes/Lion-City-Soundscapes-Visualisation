@@ -4,7 +4,8 @@
 <br />
 <div align="center">
 
-<h3 align="center">Lion City Soundscapes (visualisation)</h3>
+<h3 align="center">Lion City Soundscapes Visualisation</h3>
+<h4 align="center">(README.md is still being updated)</h4>
 
   <p align="left">
     A Django web application that visualises characteristic soundscapes of Singapore on an interactive Leaflet map. This project was done as part of my Final Year Project (FYP) Bachelor of Honours requirement at NTU and is part of the project 'Lion City Soundscapes'. This repository comprises of the code used to develop the web application and includes instructions to install the project locally. The web application has been deployed on Amazon EC2 and can be viewed live <a href="">here</a>. 
@@ -99,7 +100,7 @@ Once `venv` has been installed (refer to project prerequisites)
 
 #### Step 2: Installing the Project
 
-Clone the repository by downloading it from https://github.com/ntudsp/Lion-City-Soundscapes-Visualisation, or enter the following command on a terminal (with git installed):
+Clone the repository by downloading it from https://github.com/nemopotatoes/Lion-City-Soundscapes-Visualisation, or enter the following command on a terminal (with git installed):
 
 ```sh
 git clone https://github.com/ntudsp/Lion-City-Soundscapes-Visualisation.git
@@ -137,10 +138,14 @@ To stop the server, press `Ctrl`+`C` in your keyboard in the same terminal.
 
 ## Roadmap
 
+- [x] Define user requirements
+- [x] Web Application Design
+  - [x] User interface template
+  - [x] Wireframes and storyboards
 - [x] Set up Django project
 - [x] Set up Leaflet interactive map
 - [x] Finalise soundscape recordings (locations.csv)
-- [x] AWS Integration(EC2 Free Tier)
+- [x] AWS Integration (EC2 Free Tier)
 - [x] Other Pages (About, Resources, Recordings, Contact)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
